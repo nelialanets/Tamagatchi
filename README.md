@@ -1,5 +1,12 @@
 # Tamagatchi
 
+// 
+//
+
+
+
+
+
 USER STORY 
  
 This simple yet interactive tamagotchi game is designed for users who would like to have an extraordinary comfort pet  that they may not be able to have in real life. 
@@ -35,7 +42,6 @@ Exercise: 0-10
 Right sidebar 
 Light on/off
 Feed me
-Chat
  
 //1.3. The “PLAY” button will start ‘hovering’ to prompt the user to click play.
 //1.4. Once “PlAY” the pet starts moving “left-right’’ and the “Start” button will disappear.

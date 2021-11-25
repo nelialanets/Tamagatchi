@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous" ></script>
+  <script src="js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <audio id="sound1" volume="50" src="audio/Prizefighter - Norma Rockwell.mp3"></audio>
+  <link rel ="stylesheet" href="css/style.css">
+   <title>Tamagatchi</title>
+</head>
+<header> 
+    <button type="button" id="soundBtn"><i class="material-icons">volume_up</i></button><!--on click shoud play -->
+    <h1>Welcome to my word </h1> 
+</header>
+<body>
 
+    <div class="container">
+        <div class="PetName">
+    <input class="nameInput" type = "text" placeholder="Your pet's name">
+    <input class="hover" type="submit"> <!--once user ckliks enter the pet's name will send an aler button -->
+    </div>
+<div>
+    <h2 id="timer"> Game time:</h2>
+</div>
+    <div class="buttonSetUp">
+        <button id="play" type="button"><i class="material-icons">play_circle_outline</i>PLAY</button> 
+        <button  type="button" id ="food"><i class="material-icons">local_dining</i>Feed</button>
+        <button type="sbutton" id="light"><i class="material-icons">wb_incandescent</i>Light</button>
+    </div>
+<section class="attributes-section">
+<ul>
+    <li class="attribute" id="Age">Age:1-10</li>
+    <li class="attribute" id="hungry"> Hungry: 1-10</li>
+    <li class="attribute" id="greatful">Greatful 1-10</li>
+    <li class="attribute" id="exersise">Exersise 1-10 </li>
+</ul>
+</section>
+
+<div id="pet-area">
+<img  id="pet" class = "" src="" alt="pet-image-here">
+<div>
+</div>
+    </div> 
+</body>
+</html>
