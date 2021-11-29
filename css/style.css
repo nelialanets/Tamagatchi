@@ -6,15 +6,19 @@
 
 }
 body, html{
-    height: 100%;
+    height: 100vh;
     margin: 0;
     
 }
 
 body{
+    flex: auto;
     background-image:url("https://www.animatedimages.org/data/media/1513/animated-sea-and-ocean-image-0008.gif");
      background-size:cover;
-     height: 120%;
+     height: 100vh;
+     width: 200;
+     position:relative;
+     display: f;
      background-repeat: no-repeat;  
      font-family:'Merriweather', serif;
 }
@@ -39,7 +43,7 @@ body{
     opacity: 0.6;
     display:block;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Merriweather', serif;
     opacity: 0.6;
     border: 5em;
     padding: 8%;
@@ -99,11 +103,21 @@ body{
     }
  h2{
      text-align: center;
+     font-family:'Merriweather', serif;
+
+
  }
 h3{
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 2em;
+   border:none;
+   padding: 15px;
+   width: 10%;
+   border-radius: 5em;
+   opacity: 0.8;
+   background-color: #e07adb;
 }
+
   /*--------------------------------------
 animating the pet
   ---------------------------------------------*/
