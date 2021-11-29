@@ -49,11 +49,11 @@ let time = 0;
 
 let game ={
     name:"",
-    hunger: 0,
-    tiredness: 0,
-    exercise: 0,
+    hunger: 10,
+    tiredness: 10,
+    exercise: 10,
     isAlive: true,
-    age: 0,
+    age: 1,
 
 
 feed(){
@@ -87,20 +87,15 @@ $("#playB").on("click", () => {game.play()});
 
 
 function worldTimer(){setInterval
-    (setTimer,1000)};
-
-
-    function setTimer(){
-    
-    time ++;
-    $("#timer").text(`Timer: ${time}`)
-    console.log("Let's go")
+    (updateTime,1000)
 };
 
-
          function updateTime(){
+            time ++;
+            $("#timer").text(`Timer: ${time}`)
+            console.log("Let's go")
             
-            if (time% 60 === 60){console.log ("your baby shark has reached its life expectancy;(")
+            if (time% 60 === 0){console.log ("your baby shark has reached its life expectancy;(")
 
             game.age ++;
         }
@@ -109,6 +104,7 @@ function worldTimer(){setInterval
                 console.warn(" your bay shar is not a baby anymore, it 6 y.o");
             }
             if (game.hunger === 0 || game.tiredness === 0) {
+                
                 game.isAlive === false;
                 clearInterval(worldTimer);
                 console.log("Your tamagotchi has died!")
@@ -121,15 +117,15 @@ function worldTimer(){setInterval
                 game.sleep();
             }
 
-            if (time % 45 === 0 && lightOn === true) {
-                game.sleep--;
+            if (time % 5 === 0 && lightOn === true) {
+                game.tiredness--;
                 $("#tiredness").text(`Tiredness: ${game.tiredness}`);
             }
-            if (time % 16 === 0 && game.exercise>=2) {
+            if (time % 5 === 0 && game.exercise>=2) {
                 game.exercise--;
                 $("#exercise").text(`Exersise: ${game.exercise}`);
             }
-            if (time % 15 === 0 && game.hunger >=1) {
+            if (time % 5 === 0 && game.hunger >=1) {
                 game.hunger--;
                 $("#hunger").text(`Hunger: ${game.hunger}`);
             }
@@ -158,8 +154,7 @@ $("#light").on("click", toggleLights);
 
 $("#light").on("click", toggleLights);
 
-
-function startGame() {
+function goGame() {
     game.name = $('.user-entery').val();
     $('#petName').text(game.name);
     updateTime();
@@ -170,6 +165,6 @@ function startGame() {
 buttons area
 --------------------------------------*/
 $("#light").on("click", toggleLights);
-$(".start-btn").on('click', startGame);
+$(".start-btn").on('click', goGame);
 $("#food").on('click',() => {game.feed()});
 $("#playB").on("click", () => {game.play()});
