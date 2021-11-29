@@ -94,13 +94,7 @@ body{
     bottom: 2px;
     right: 15px;
 }
-    .pet-profile > li{
-    padding: 0.5em;
-	display: inline;
-	font-size: 2em;
-	color: white;
-	text-shadow: 2px 2px 5px #8a0383;
-    }
+
  h2{
      text-align: center;
      font-family:'Merriweather', serif;
@@ -108,8 +102,8 @@ body{
 
  }
 h3{
-    margin-top: 5%;
-    margin-left: 2em;
+   margin-top: 5%;
+   margin-left: 2em;
    border:none;
    padding: 15px;
    width: 10%;
@@ -118,18 +112,22 @@ h3{
    background-color: #e07adb;
 }
 
-  /*--------------------------------------
-animating the pet
-  ---------------------------------------------*/
-
+#pet1{
+    animation-name:swim;
+    position: absolute;
+    animation-fill-mode:both;
+    animation-play-state: running;
+    animation-duration:25s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
   @keyframes swim{
       0%{right:0px;}
-      25%{left: -800px; top:-400px}
-      35%{left: -1400px; top:-500px }
-      50%{right:-1300px; top:-600px}
+      25%{left: -800px; top:-300px}
+      35%{left: -800px; top:-500px }
+      50%{right:-1600px; top:-600px}
       75% {left: -0px; top:-800px}
-      100%{left:-1600px;top:-100px }
-
-     from{ transform: translateX(0);}
+      100%{left:-1600px;top:-100px}
+      from{ transform: translateX(-0);}
       to{ transform:translateX(-800px)}
   }
