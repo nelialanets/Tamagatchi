@@ -7,7 +7,7 @@ The few basic game attributes will allow the user to take care  of the pet’s w
 The duration of the game is 60 seconds which indicates that the pet’s life cycle  is short.
  
 Game blueprint:
-Programing Approach: Object Oriented Programing
+Programing Approach: Object Oriented Programming
  
  LANDING PAGE
  
