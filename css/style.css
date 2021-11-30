@@ -17,7 +17,7 @@ body{
     background-image:url("https://www.animatedimages.org/data/media/1513/animated-sea-and-ocean-image-0008.gif");
      background-size:cover;
      height: 100vh;
-     width: 100%;
+     width: 100hv;
      position:relative;
      background-repeat: no-repeat;  
      font-family:'Merriweather', serif;
@@ -115,6 +115,7 @@ h3{
 animatiion area
 -----------------*/
 #pet1{
+    margin-top: 20%;
     animation-name:swim;
     position: absolute;
     animation-fill-mode:both;
@@ -124,16 +125,16 @@ animatiion area
     animation-play-state: ;
 }
   @keyframes swim{
-      0%{leftt:0px;}
-      25%{left: -800px; top:-300px}
-      35%{left: -800px; top:-500px }
-      50%{right:-1000px; top:-600px}
-      75% {left: -0px; top:-800px}
-      100%{left:-1600px;top:-100px
-    } 
-    from{ transform: translateX(0);}
-      to{ transform:translateX(100px)}
+      0%{right:0px;}
+      25%{left: -100px; top:-200px}
+      35%{left: -300px; top:-400px }
+      50%{right:-400px; top:-400px}
+      75% {left: -500px; top:-300px}
+      100%{left:-1600px;top:-100px}
+      from{ transform: translateX(-0);}
+      to{ transform:translateX(-800px)}
   }
+
 
   .centerForm{
       margin-top: 2%;
@@ -157,6 +158,7 @@ animatiion area
 input:hover{
     background-color: chartreuse;
     opacity: 0.6;
+
 }
   /*----------------
   modal area
