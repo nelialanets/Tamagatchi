@@ -2,6 +2,8 @@
  
 USER STORY
 
+https://github.com/nelialanets/nelialanet.github.io
+
 This simple yet interactive tamagotchi game is designed for users who would like to have an extraordinary comfort pet that they may not be able to have in real life.
 The few basic game attributes will allow the user to take care  of the pet’s well being  by feeding, playing with it and letting the pet to rest. The pet's well- being will be  reflected by the progress bars. The user needs to make sure that none of the interval bars reach 0 in order for the game to carry on.
 The duration of the game is 60 seconds which indicates that the pet’s life cycle  is short.
