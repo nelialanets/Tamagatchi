@@ -16,11 +16,11 @@ Programing Approach: Object Oriented Programing
 Input and the “start button” 
 The baby- shark located  on the bottom on the page “waiting” “hovering”.
 4 intervals left sidebar
-Age=0;
-Hunger:10;
-Gratitude: 10;
-Exercise: 10;
-3 buttons on the rightside:
+//Age=0;
+//Hunger:10;
+//Gratitude: 10;
+//Exercise: 10;
+//3 buttons on the rightside:
 
 Play
 Light on/off
