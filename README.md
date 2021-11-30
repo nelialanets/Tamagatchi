@@ -9,6 +9,7 @@
 
 USER STORY 
  
+ 
 This simple yet interactive tamagotchi game is designed for users who would like to have an extraordinary comfort pet  that they may not be able to have in real life. 
  
 The few basic game attributes will allow the user to take care  of the pet’s well being  by feeding, playing and let pet to rest. The pets well being will be  reflected by the progress bars. The user needs to make sure that none of the interval bars reach 0 in order for the game carry on. 
