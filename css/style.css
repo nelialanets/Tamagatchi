@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: auto;
 
 
 }
@@ -13,12 +13,12 @@ body, html{
 
 body{
     flex: auto;
+    max-width: auto;
     background-image:url("https://www.animatedimages.org/data/media/1513/animated-sea-and-ocean-image-0008.gif");
      background-size:cover;
      height: 100vh;
-     width: 200;
+     width: 100%;
      position:relative;
-     display: f;
      background-repeat: no-repeat;  
      font-family:'Merriweather', serif;
 }
@@ -27,9 +27,25 @@ body{
     display:flex;
 }
 
+h2{
+    text-align: center;
+    font-family:'Merriweather', serif;
+
+
+}
+h3{
+  margin-top: 2%;
+  margin-left: 2em;
+  border:none;
+  padding: 15px;
+  width: 10%;
+  border-radius: 5em;
+  opacity: 0.8;
+  background-color: #e07adb;
+}
 /* Buttons SetUp*/
 .buttonSetUp{
-    margin-top: 10%;
+    margin-top: 5%;
     position: absolute;
     right: 10px;
     z-index: 3px;
@@ -58,7 +74,7 @@ body{
 }
 
 .attributes-section{
-    margin-top: 10%;
+    margin-top: 5%;
     position: absolute;
     left: 15px;  
 }
@@ -66,7 +82,6 @@ body{
     list-style: none;
     border: none;
     opacity: 0.6;
-    border-radius: 5%;
     margin: 1em;
     margin-right: auto;
     border-radius: 5em;
@@ -90,28 +105,15 @@ body{
 /*Pet CSS*/
 
 #pet-area{
+    margin-bottom:15%;
     position:absolute;
     bottom: 2px;
     right: 15px;
 }
 
- h2{
-     text-align: center;
-     font-family:'Merriweather', serif;
-
-
- }
-h3{
-   margin-top: 5%;
-   margin-left: 2em;
-   border:none;
-   padding: 15px;
-   width: 10%;
-   border-radius: 5em;
-   opacity: 0.8;
-   background-color: #e07adb;
-}
-
+/*---------------
+animatiion area
+-----------------*/
 #pet1{
     animation-name:swim;
     position: absolute;
@@ -119,15 +121,78 @@ h3{
     animation-play-state: running;
     animation-duration:25s;
     animation-iteration-count: infinite;
-    animation-play-state: paused;
+    animation-play-state: ;
 }
   @keyframes swim{
-      0%{right:0px;}
+      0%{leftt:0px;}
       25%{left: -800px; top:-300px}
       35%{left: -800px; top:-500px }
-      50%{right:-1600px; top:-600px}
+      50%{right:-1000px; top:-600px}
       75% {left: -0px; top:-800px}
-      100%{left:-1600px;top:-100px}
-      from{ transform: translateX(-0);}
-      to{ transform:translateX(-800px)}
+      100%{left:-1600px;top:-100px
+    } 
+    from{ transform: translateX(0);}
+      to{ transform:translateX(100px)}
   }
+
+  .centerForm{
+      margin-top: 2%;
+      display: flex;
+      justify-content: center;
+  }
+
+  input{
+      padding: 15px;
+    border: none;
+    opacity: 0.6;
+    border-radius: 5em;
+    margin: 1em;
+    text-align: center;
+    color: black;
+    font-family:'Merriweather', serif;
+    font-style: bold;
+
+}
+
+input:hover{
+    background-color: chartreuse;
+    opacity: 0.6;
+}
+  /*----------------
+  modal area
+  ------------------*/
+  /*modal background
+  #modal {
+    display: none; /* Hidden by default */
+    /*position: fixed; /* Stay in place */
+    /*z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }/*
+  /* Modal Content
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    /*padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  /*}
+  /* The Close Button 
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }*/
