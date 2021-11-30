@@ -2,7 +2,6 @@
 
 USER STORY 
  
-USER STORY 
  
 This simple yet interactive tamagotchi game is designed for users who would like to have an extraordinary comfort pet  that they may not be able to have in real life. 
  
