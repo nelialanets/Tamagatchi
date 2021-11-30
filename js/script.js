@@ -83,41 +83,39 @@ $("#playB").on("click", () => {game.play()});
 
 
 /*---setting up timer and activating attributes ----*/
-
-
-
 function worldTimer(){setInterval
     (updateTime,1000)
 };
-
          function updateTime(){
             time ++;
             $("#timer").text(`Timer: ${time}`)
             console.log("Let's go")
             
             if (time% 60 === 0){console.log ("your baby shark has reached its life expectancy;(")
-
-            game.age ++;
         }
+             game.age ++;
 
-            if(game.age === 6){
-                console.warn(" your bay shar is not a baby anymore, it 6 y.o");
+              $("#age").text(`age:${game.age}`)
+           
+              if(game.age === 10){
+                alert(" your bay shar is not a baby anymore, it 6 y.o");
             }
             if (game.hunger === 0 || game.tiredness === 0) {
                 
                 game.isAlive === false;
                 clearInterval(worldTimer);
-                console.log("Your tamagotchi has died!")
+                alert("Your tamagotchi has died!")
+                reset
             }
             if (game.isAlive === false) {
             
             }
     
-            if (lightOn !== true && time % 5 === 0) {
+            if (lightOn !== true && time % 2 === 0) {
                 game.sleep();
             }
 
-            if (time % 5 === 0 && lightOn === true) {
+            if (time % 2 === 0 && lightOn === true) {
                 game.tiredness--;
                 $("#tiredness").text(`Tiredness: ${game.tiredness}`);
             }
@@ -161,8 +159,12 @@ function goGame() {
     worldTimer();
 };
 
-
-}
+/*if (lightOn){
+    opacity =0.6;
+    lightOn=false
+}  else{
+    lightOn= true
+       opacity =0.0;*/
 /*------------------------------------------------
 buttons area
 --------------------------------------*/
