@@ -128,8 +128,6 @@ function worldTimer(){setInterval
                 $("#hunger").text(`Hunger: ${game.hunger}`);
             }
     };
-
-
 let lightOn = true;
 
 const toggleLights =function toggleLights(){
