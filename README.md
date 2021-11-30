@@ -1,12 +1,6 @@
 # Tamagatchi
 
 // 
-//
-
-
-
-
-
 USER STORY 
  
  
