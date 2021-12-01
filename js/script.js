@@ -55,31 +55,26 @@ let game ={
     isAlive: true,
     age: 1,
 
-
+//callling methods to mmake buttons interect with attributs
 feed(){
     this.hunger++;
-    console.log(`I love the food!`);
-    console.log(`hunger is at ${this.hunger}`);
+    //console.log(`hunger is at ${this.hunger}`);
     $("#hunger").text(`Hunger: ${this.hunger}`);
 },
 
 play() {
     this.exercise++;
-    console.log('Having funn!');
-    console.log(`exersise}is at ${this.exercise}`);
+    //console.log(`exersise}is at ${this.exercise}`);
     $("#exercise").text(`Boredom: ${this.exercise}`);
 },
 
 sleep(){
     this.tiredness++;
-    console.log('awwww sleepy!');
-    console.log(`tiredness is at ${this.tiredness}`);
+    //console.log(`tiredness is at ${this.tiredness}`);
     $("#tiredness").text(`Boredom: ${this.tiredness}`);
+
 },
 }
-
-$("#food").on('click',() => {game.feed()});
-$("#playB").on("click", () => {game.play()});
 
 
 /*---setting up timer and activating attributes ----*/
@@ -91,21 +86,22 @@ function worldTimer(){setInterval
             $("#timer").text(`Timer: ${time}`)
             console.log("Let's go")
             
-            if (time% 60 === 0){console.log ("your baby shark has reached its life expectancy;(")
+            if (time% 60 === 0){console.log ("your baby shark has reached its life expectancy;")
         }
              game.age ++;
 
               $("#age").text(`age:${game.age}`)
            
               if(game.age === 10){
-                alert(" your bay shar is not a baby anymore, it 6 y.o");
+                alert(" your bay shar is not a baby anymore, it's 8 y.o");
             }
             if (game.hunger === 0 || game.tiredness === 0) {
-                
+
                 game.isAlive === false;
-                clearInterval(worldTimer);
+
+                clearInterval(updateTime);
                 alert("Your tamagotchi has died!")
-                reset
+                gameOver();
             }
             if (game.isAlive === false) {
             
@@ -115,11 +111,11 @@ function worldTimer(){setInterval
                 game.sleep();
             }
 
-            if (time % 2 === 0 && lightOn === true) {
+            if (time % 15 === 0 && lightOn === true) {
                 game.tiredness--;
-                $("#tiredness").text(`Tiredness: ${game.tiredness}`);
+                $("#tiredness").text(`Tiredness: ${game.tiredness}`)
             }
-            if (time % 5 === 0 && game.exercise>=2) {
+            if (time % 10 === 0 && game.exercise>=2) {
                 game.exercise--;
                 $("#exercise").text(`Exersise: ${game.exercise}`);
             }
@@ -128,15 +124,15 @@ function worldTimer(){setInterval
                 $("#hunger").text(`Hunger: ${game.hunger}`);
             }
     };
+
 let lightOn = true;
-
+let opacity = 0;
 const toggleLights =function toggleLights(){
-    lightOn =!lightOn
-    
-    let opacity =0.6;
-
-    if(lightOn){
-        opacity=0.0;
+   
+   if(lightOn =!lightOn){ 
+     opacity =0.6;
+    }else if (lightOn){
+        opacity= 0.0;
     }
 const styles={
     "background-color": `rgba(0, 0, 0, ${opacity}`,
@@ -155,8 +151,32 @@ function goGame() {
     $('#petName').text(game.name);
     updateTime();
     worldTimer();
+    gameM();
 };
 
+ let gameSound = new Audio("./audio/underTheSea.mp3")
+
+ function gameM(){
+    gameSound.play()
+    console.log("music paly")
+}
+
+
+function gameOver(){
+    $('.buttonSetUp').hide();
+    $('.attributes-section').hide();
+    $('img').hide();
+    clearInterval(worldTimer);
+    game.hunger=0;
+    game.tiredness = 0;
+    game.exercise = 0;
+    game.age= 1;
+}
+
+ let muteBtn = document.getElementById('mute');
+ $mute.click(function(){
+     mute.pause();
+})
 /*if (lightOn){
     opacity =0.6;
     lightOn=false
@@ -169,4 +189,4 @@ buttons area
 $("#light").on("click", toggleLights);
 $(".start-btn").on('click', goGame);
 $("#food").on('click',() => {game.feed()});
-$("#playB").on("click", () => {game.play()});
+$("#playB").on("click",() => {game.play()});
