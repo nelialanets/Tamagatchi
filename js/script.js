@@ -76,7 +76,6 @@ sleep(){
 },
 }
 
-
 /*---setting up timer and activating attributes ----*/
 function worldTimer(){setInterval
     (updateTime,1000)
@@ -161,7 +160,6 @@ function goGame() {
     console.log("music paly")
 }
 
-
 function gameOver(){
     $('.buttonSetUp').hide();
     $('.attributes-section').hide();
@@ -177,12 +175,6 @@ function gameOver(){
  $mute.click(function(){
      mute.pause();
 })
-/*if (lightOn){
-    opacity =0.6;
-    lightOn=false
-}  else{
-    lightOn= true
-       opacity =0.0;*/
 /*------------------------------------------------
 buttons area
 --------------------------------------*/
