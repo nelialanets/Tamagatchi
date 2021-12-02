@@ -65,13 +65,13 @@ feed(){
 play() {
     this.exercise++;
     //console.log(`exersise}is at ${this.exercise}`);
-    $("#exercise").text(`Boredom: ${this.exercise}`);
+    $("#exercise").text(`Exercise: ${this.exercise}`);
 },
 
 sleep(){
     this.tiredness++;
     //console.log(`tiredness is at ${this.tiredness}`);
-    $("#tiredness").text(`Boredom: ${this.tiredness}`);
+    $("#tiredness").text(`Tiredness: ${this.tiredness}`);
 
 },
 }
@@ -99,7 +99,7 @@ function worldTimer(){setInterval
                 game.isAlive === false;
 
                 clearInterval(updateTime);
-                alert("Your tamagotchi has died!")
+                alert("Your tamagotchi has died! Try again")
                 gameOver();
             }
             if (game.isAlive === false) {
@@ -110,15 +110,15 @@ function worldTimer(){setInterval
                 game.sleep();
             }
 
-            if (time % 15 === 0 && lightOn === true) {
+            if (time % 2 === 0 && lightOn === true) {
                 game.tiredness--;
                 $("#tiredness").text(`Tiredness: ${game.tiredness}`)
             }
-            if (time % 10 === 0 && game.exercise>=2) {
+            if (time % 2 === 0 && game.exercise>=2) {
                 game.exercise--;
                 $("#exercise").text(`Exersise: ${game.exercise}`);
             }
-            if (time % 5 === 0 && game.hunger >=1) {
+            if (time % 2 === 0 && game.hunger >=1) {
                 game.hunger--;
                 $("#hunger").text(`Hunger: ${game.hunger}`);
             }
@@ -151,6 +151,7 @@ function goGame() {
     updateTime();
     worldTimer();
     gameM();
+    playPet();
 };
 
  let gameSound = new Audio("./audio/underTheSea.mp3")
@@ -164,14 +165,14 @@ function gameOver(){
     $('.buttonSetUp').hide();
     $('.attributes-section').hide();
     $('img').hide();
-    clearInterval(worldTimer);
-    game.hunger=0;
-    game.tiredness = 0;
-    game.exercise = 0;
-    game.age= 1;
+    $('.gameSt').hide();
+    $('.petName').hide();
+}
+function playPet() {
+    $('#pet1').css('animation-play-state', 'running');
 }
 
- let muteBtn = document.getElementById('mute');
+ /*let muteBtn = document.getElementById('mute');
  $mute.click(function(){
      mute.pause();
 })

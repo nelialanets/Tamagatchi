@@ -122,7 +122,7 @@ animatiion area
     animation-play-state: running;
     animation-duration:25s;
     animation-iteration-count: infinite;
-    animation-play-state: ;
+    animation-play-state: paused;
 }
   @keyframes swim{
       0%{right:0px;}
